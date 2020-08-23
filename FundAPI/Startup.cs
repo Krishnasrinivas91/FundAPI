@@ -27,9 +27,7 @@ namespace FundAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IFundManager, FundManager>();
-            //services.AddScoped(typeof(IFundManager), typeof(FundManager));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace FundAPI.Models
 {
+    [Serializable]
     public class FundDetails
     {
         public string FundName { get; set; }
