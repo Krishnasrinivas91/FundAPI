@@ -25,9 +25,16 @@ namespace FundAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            _logger.LogInformation("Get fund details");
-            var list = _fundManager.GetFundDetails();
-            return Ok(list);
+            try
+            {
+                _logger.LogInformation("Get fund details");
+                var list = _fundManager.GetFundDetails();
+                return Ok(list);
+                    }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 }
